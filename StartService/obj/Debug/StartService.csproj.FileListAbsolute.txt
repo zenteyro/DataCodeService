@@ -1,0 +1,9 @@
+E:\Projects\DataCodeWindowsService\StartService\bin\Debug\StartService.exe.config
+E:\Projects\DataCodeWindowsService\StartService\bin\Debug\StartService.exe
+E:\Projects\DataCodeWindowsService\StartService\bin\Debug\StartService.pdb
+E:\Projects\DataCodeWindowsService\StartService\obj\Debug\StartService.csprojResolveAssemblyReference.cache
+E:\Projects\DataCodeWindowsService\StartService\obj\Debug\StartService.Properties.Resources.resources
+E:\Projects\DataCodeWindowsService\StartService\obj\Debug\StartService.csproj.GenerateResource.Cache
+E:\Projects\DataCodeWindowsService\StartService\obj\Debug\StartService.exe
+E:\Projects\DataCodeWindowsService\StartService\obj\Debug\StartService.pdb
+E:\Projects\DataCodeWindowsService\StartService\obj\Debug\StartService.ServiceForm.resources
