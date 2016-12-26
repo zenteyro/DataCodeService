@@ -47,7 +47,7 @@
             // stopButton
             // 
             this.stopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.stopButton.Location = new System.Drawing.Point(12, 48);
+            this.stopButton.Location = new System.Drawing.Point(12, 12);
             this.stopButton.Name = "stopButton";
             this.stopButton.Size = new System.Drawing.Size(123, 30);
             this.stopButton.TabIndex = 1;
@@ -60,7 +60,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(147, 92);
+            this.ClientSize = new System.Drawing.Size(147, 53);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.startButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

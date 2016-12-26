@@ -9,58 +9,51 @@ namespace StartService
 {
     public partial class ServiceForm : Form
     {
-        string ServiceExeFile;
         ServiceController service;
         string exeServiceFile;
         public ServiceForm()
         {
             InitializeComponent();
-            //take path to this assembly, in further will redefine for right path which contain service
-            ServiceExeFile = Assembly.GetExecutingAssembly().Location;
-
-            //Will use for launch service
-            service = new ServiceController("=DataCode=");
-
-            //get right path to service-file .exe
             exeServiceFile = GetPath();
+            service = new ServiceController("=DataCode=");
+            stopButton.Visible = false;
         }
 
         private void startButton_Click(object sender, EventArgs e)
         {
             try
             {
+                //Install service
                 ManagedInstallerClass.InstallHelper(new[] { exeServiceFile });
                 service.Start();
                 MessageBox.Show("The service is run");
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("The service running already");
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                stopButton.Visible = true;
             }
         }
-
         private void stopButton_Click(object sender, EventArgs e)
         {
-            //Was created async method because ManagedInstallerClass.InstallHelper method destroy programm work few seconds
-            UninstallServiceAsync();
-        }
-
-        async void UninstallServiceAsync()
-        {
-
-            await Task.Run(() =>
+            try
             {
-                try
-                {
-                    //Latency is here, therefore was created async method
-                    ManagedInstallerClass.InstallHelper(new[] { "/u", exeServiceFile });
-                    MessageBox.Show("The service was uninstalled");
-                }
-                catch
-                {
-                    MessageBox.Show("The service is uninstalled already");
-                }
-            });
+                //Uninstall service
+                ManagedInstallerClass.InstallHelper(new[] { "/u", exeServiceFile });
+                MessageBox.Show("The service was uninstalled");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                stopButton.Visible = false;
+                startButton.Visible = true;
+            }
         }
         string GetPath()
         {

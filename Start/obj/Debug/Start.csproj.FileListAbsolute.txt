@@ -1,0 +1,8 @@
+E:\Projects\DataCodeWindowsService\Start\bin\Debug\Start.exe.config
+E:\Projects\DataCodeWindowsService\Start\bin\Debug\Start.exe
+E:\Projects\DataCodeWindowsService\Start\bin\Debug\Start.pdb
+E:\Projects\DataCodeWindowsService\Start\obj\Debug\Start.Form1.resources
+E:\Projects\DataCodeWindowsService\Start\obj\Debug\Start.Properties.Resources.resources
+E:\Projects\DataCodeWindowsService\Start\obj\Debug\Start.csproj.GenerateResource.Cache
+E:\Projects\DataCodeWindowsService\Start\obj\Debug\Start.exe
+E:\Projects\DataCodeWindowsService\Start\obj\Debug\Start.pdb
